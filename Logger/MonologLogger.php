@@ -73,6 +73,12 @@ class MonologLogger implements LoggerInterface
                 continue;
             }
 
+            if ($propertyName === 'user') {
+                $user = $accessor->getValue($event, $propertyName);
+                $arr[$property->getName()] = (string) $user;
+                continue;
+            }
+
             $arr[$property->getName()] = $accessor->getValue($event, $propertyName);
         }
 
