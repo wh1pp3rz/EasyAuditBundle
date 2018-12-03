@@ -178,7 +178,7 @@ class DocumentEventResolver implements EventResolverInterface
      * @required
      * @param ManagerRegistry $doctrine
      */
-    public function setDoctrine($doctrine)
+    public function setDoctrine(ManagerRegistry $doctrine)
     {
         $this->doctrine = $doctrine;
     }
